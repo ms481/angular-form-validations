@@ -1,0 +1,30 @@
+<form [formGroup]="testForm">
+  <mat-form-field>
+    <mat-label>Total Payment</mat-label>
+    <input matInput formControlName="totalPayment" [errorStateMatcher]="matcher" />
+    <mat-error *ngIf="isRequiredError('totalPayment')"> Input required </mat-error>
+    <mat-error *ngIf="isPatterError('totalPayment')"
+      >Only numbers with 2 digits after dot (.)</mat-error
+    >
+    <mat-error *ngIf="isMinGreaterThanTotalError()"
+      >Min. payment greater than total payment</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Min. Payment</mat-label>
+    <input matInput formControlName="minPayment" [errorStateMatcher]="matcher" />
+    <mat-error *ngIf="isRequiredError('minPayment')"> Input required </mat-error>
+    <mat-error *ngIf="isPatterError('minPayment')"
+      >Only numbers with 2 digits after dot (.)</mat-error
+    >
+    <mat-error *ngIf="isMinGreaterThanTotalError()"
+      >Min. payment greater than total payment</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Investment Amount</mat-label>
+    <input matInput formControlName="investAmount" />
+    <mat-error *ngIf="isRequiredError('investAmount')"> Input required </mat-error>
+    <mat-error *ngIf="isPatterError('investAmount')">Only whole numbers</mat-error>
+  </mat-form-field>
+</form>

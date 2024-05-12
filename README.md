@@ -2,6 +2,8 @@
 
 Custom form validations in Angular reactive forms.
 
+![angular_custom_validations_demo](https://github.com/ms481/angular-form-validations/assets/118136815/56840d63-3fbf-427e-a5c5-9501ec145cc8)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
 ## Development server
